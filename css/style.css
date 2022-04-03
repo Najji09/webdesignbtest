@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+div#wrap {
+  width: 1200px;
+  margin: 0 auto;
+  outline: 1px solid black;
+}
+header {
+  width: 1200px;
+  height: 100px;
+}
+header::after {
+  display: block;
+  clear: both;
+  content: '';
+}
+header h1 {
+  height: 100px;
+  width: 200px;
+  display: block;
+  float: left;
+}
+
+header h1 img {
+  display: block;
+  width: 200px;
+  margin-top: 30px;
+}
+header nav {
+  float: right;
+  position: relative;
+  z-index: 10;
+  right: 100px;
+}
+header nav > ul {
+  position: relative;
+  z-index: 10;
+}
+header nav > ul::after {
+  display: block;
+  clear: both;
+  content: '';
+}
+header nav > ul > li {
+  position: relative;
+  z-index: 10;
+  float: left;
+  margin-top: 40px;
+  width: 100px;
+}
+header nav > ul > li > ul > li {
+  position: relative;
+  background-color: #fff;
+  z-index: 10;
+}
+header nav ul a {
+  display: block;
+  line-height: 60px;
+  height: 100%;
+  width: 100px;
+  transition: all 0.5s;
+  text-align: center;
+}
+header nav > ul > li > ul {
+  position: absolute;
+  display: none;
+}
+nav ul > li:hover > a {
+  background-color: #000;
+  color: #fff;
+}
+main {
+  width: 1200px;
+  height: 300px;
+  position: relative;
+
+  overflow: hidden;
+  z-index: 1;
+}
+main ul {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+main ul li img {
+  width: 1200px;
+  height: 300px;
+  display: block;
+}
+.con {
+  height: 200px;
+  position: relative;
+}
+.con::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+.con .cont {
+  width: 400px;
+  height: 200px;
+  position: relative;
+  float: left;
+}
+.cont dl {
+  position: absolute;
+  top: 40px;
+  height: 160px;
+  width: 400px;
+  display: block;
+}
+.cont dl.on dd {
+  display: block;
+  z-index: 3;
+}
+.cont dl.no dd {
+  display: none;
+  z-index: 0;
+}
+.cont dl dt {
+  position: absolute;
+  top: -40px;
+  width: 200px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+.cont dl:last-child dt {
+  right: 0;
+}
+
+.cont dl.on dt {
+  background-color: #000;
+  color: #fff;
+}
+.cont dl.on dt > a {
+  background-color: #000;
+  color: #fff;
+}
+
+.cont dl.no dt {
+  background-color: #fff;
+  color: #000;
+}
+.cont dl.no dt > a {
+  background-color: #fff;
+  color: #000;
+}
+.cont dl dd {
+  width: 400px;
+  height: 160px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+}
+.cont dl:first-of-type dd ul li {
+  list-style: circle;
+  list-style-position: inside;
+  line-height: 1.5;
+  position: relative;
+  width: 360px;
+}
+.cont dl:first-of-type dd ul li span {
+  position: absolute;
+  right: 0;
+}
+.cont dl:first-of-type dd ul li:hover {
+  text-decoration: underline;
+}
+.cont dl:last-of-type dd ul {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+}
+.cont dl:last-of-type dd li {
+  flex: 1;
+}
+.cont dl:last-of-type dd li img {
+  width: 110px;
+  height: 120px;
+}
+.banner,
+.goto {
+  position: relative;
+  float: left;
+  width: 400px;
+  height: 200px;
+}
+footer {
+  height: 100px;
+  display: flex;
+}
+footer > div {
+  flex: 1;
+}
+div#popup_wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+div#popup {
+  box-sizing: border-box;
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 20px;
+}
+div#popup a {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: block;
+  padding: 10px 20px;
+  border: 1px solid #000;
+}
